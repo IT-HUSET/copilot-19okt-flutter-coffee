@@ -1,3 +1,12 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
+
+// TODO: Create a class representing a coffee drink, with fields for name, price and iconURL.
+
+// TODO: Create a function that reads a list of CoffeeDrink objects from a JSON string.
+
+
+const coffeDrinksJson = '''
 [
     {
         "id": "1",
@@ -30,3 +39,4 @@
         "iconURL": "https://prototyingstorage.blob.core.windows.net/files/713094799_icon_cortado.png"
     }
 ]
+''';
