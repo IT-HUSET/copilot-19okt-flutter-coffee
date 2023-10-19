@@ -1,9 +1,27 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
 
-// TODO: Create a class representing a coffee drink, with fields for name, price and iconURL.
 
-// TODO: Create a function that reads a list of CoffeeDrink objects from a JSON string.
+class CoffeeDrink {
+  String name;
+  String price;
+  String iconURL;
+
+  CoffeeDrink(this.name, this.price, this.iconURL); 
+}
+
+
+List<CoffeeDrink> getCoffeeDrinks(){
+  return getCoffeeDrinksFromJson(coffeDrinksJson);
+}
+
+List<CoffeeDrink> getCoffeeDrinksFromJson(String jsonString) {    
+  final List<dynamic> jsonList = json.decode(jsonString);
+  return jsonList.map((json) => CoffeeDrink(
+    json['name'] as String,
+    json['price'] as String,
+    json['iconURL'] as String,
+  )).toList();
+}
 
 
 const coffeDrinksJson = '''

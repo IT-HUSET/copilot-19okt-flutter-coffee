@@ -44,20 +44,24 @@ class WelcomeScreen extends StatelessWidget {
 }
 
 class ProductSelection extends StatelessWidget {
+  final drinks = getCoffeeDrinks();
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Select Product'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/order_confirmation');
+      body: ListView.builder(
+          itemCount: drinks.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(drinks[index].name),
+              onTap: () {
+                Navigator.pushNamed(context, '/order_confirmation');
+              },
+            );
           },
-            child: Text('Order Large BerserkerBrew'),
-        ),
         ),          
     );
   }
