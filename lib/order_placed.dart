@@ -3,7 +3,7 @@ import 'package:flutter_coffee/coffee_drink.dart';
 import 'dart:math';
 
 class FinalScreen extends StatelessWidget {
-  final CoffeeDrink drink = selectedDrink!;
+  final CoffeeDrink drink = selectedDrink;
 
   @override
   Widget build(BuildContext context) {
