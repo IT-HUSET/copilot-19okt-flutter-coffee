@@ -1,6 +1,10 @@
 import 'dart:convert';
 
 
+// Nice and clean state management. 💪
+CoffeeDrink selectedDrink = coffeeDrinks.first;
+
+
 class CoffeeDrink {
   String name;
   String price;
@@ -10,9 +14,7 @@ class CoffeeDrink {
 }
 
 
-List<CoffeeDrink> getCoffeeDrinks(){
-  return getCoffeeDrinksFromJson(coffeDrinksJson);
-}
+List<CoffeeDrink> coffeeDrinks = getCoffeeDrinksFromJson(coffeDrinksJson);
 
 List<CoffeeDrink> getCoffeeDrinksFromJson(String jsonString) {    
   final List<dynamic> jsonList = json.decode(jsonString);
