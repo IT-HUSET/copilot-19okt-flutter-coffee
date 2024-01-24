@@ -5,18 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "FlutterCoffee",
+            "name": "Run all Tests",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/"
+        },
+        {
+            "name": "Flutter: Debug",
             "request": "launch",
 			"type": "dart",
 			"program": "lib/main.dart",
-            "noDebug": true,
             "flutterMode": "debug",
 			"args": [
+                "--no-start-paused",
 				"--web-hostname",
 				"any", 
                 "--web-port", 
                 "3000"
 			]
         },
+        {
+            "name": "Flutter: No debug (release)",
+            "request": "launch",
+			"type": "dart",
+			"program": "lib/main.dart",
+            "flutterMode": "release",
+            "noDebug": true,
+			"args": [
+                "--no-start-paused",
+                "--no-hot",
+				"--web-hostname",
+				"any", 
+                "--web-port", 
+                "3000"
+			]
+        }
     ]
 }

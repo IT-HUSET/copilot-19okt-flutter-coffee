@@ -8,7 +8,10 @@
     "vscode": {
       "extensions": [
         "Dart-Code.dart-code",
-        "Dart-Code.flutter"
+        "Dart-Code.flutter", 
+        "ms-vscode-remote.remote-containers", 
+        "GitHub.codespaces", 
+        "GitHub.copilot"
       ]
     }
   }

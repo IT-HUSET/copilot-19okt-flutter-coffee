@@ -1,1 +1,1 @@
-flutter run -d web-server --web-hostname 0.0.0.0 --web-port 3000
+flutter run -d web-server --no-start-paused --web-hostname any --web-port 3000
